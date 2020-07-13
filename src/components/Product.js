@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Button from '@material-ui/core/Button';
 
 class Product extends Component {
     render() {
@@ -9,7 +10,12 @@ class Product extends Component {
                         <li key={product._id}>
                             <div className="product">
                                 <a href={"#" + product._id}>
-                                    <img src={product.image} alt={product.title}></img>
+                                    <img 
+                                        src={product.image} 
+                                        alt={product.title} 
+                                        className="image"
+                                    >
+                                    </img>
                                     <p>
                                         {product.title}
                                     </p>
@@ -18,9 +24,9 @@ class Product extends Component {
                                     <div>
                                         {product.price}
                                     </div>
-                                    <button className="button primary">
-                                        Add To Cart
-                                    </button>
+                                    <Button variant="outlined" color="primary">
+                                         Add To Cart
+                                    </Button>
                                 </div>
                             </div>
                         </li>
